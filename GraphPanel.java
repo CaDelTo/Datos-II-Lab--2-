@@ -14,9 +14,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -166,7 +163,7 @@ public class GraphPanel extends JPanel implements MouseListener {
     }
     private Node getNodeByName(String name) {
         for (Node node : nodes) {
-            if (node.getName() != null && (node.getName().equals(name) || node.getName2().equals(name))) {
+            if (node.getName() != null && (node.getName().equalsIgnoreCase(name) || node.getName2().equalsIgnoreCase(name))) {
                 return node;
             }
         }
